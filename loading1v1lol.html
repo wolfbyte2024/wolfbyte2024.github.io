@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loading...</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: black; /* Background color */
+            color: #39FF14; /* Neon green text color */
+            font-family: Arial, sans-serif;
+            font-size: 2em;
+            text-align: center;
+            margin: 0;
+            overflow: hidden; /* Prevent scrollbars */
+        }
+        #message {
+            white-space: pre-wrap; /* Preserve whitespace and line breaks */
+            overflow: hidden;
+            border-right: .15em solid #39FF14; /* Neon green caret */
+            animation: typing 3.5s steps(30, end), blink-caret .75s step-end infinite;
+            color: #39FF14; /* Ensure text color is neon green */
+            font-weight: bold;
+        }
+        #choice {
+            display: none; /* Initially hidden */
+            color: #39FF14; /* Neon green text color */
+            font-weight: bold;
+        }
+        #choice button {
+            background-color: #39FF14; /* Neon green background */
+            color: black;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        #choice button:hover {
+            background-color: #2dff00; /* Slightly lighter green for hover */
+        }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: #39FF14; }
+        }
+    </style>
+</head>
+<body>
+    <div id="message">Loading...</div>
+    <div id="choice">
+        <p>Oh no!<br>R U Sigma???</p>
+        <button id="yesButton">Yes</button>
+        <button id="noButton">No</button>
+    </div>
+    <script>
+        function simulateTypingEffect() {
+            const messageElement = document.getElementById('message');
+            const choiceElement = document.getElementById('choice');
+            
+            // Duration of typing animation
+            const typingDuration = 3500; // in milliseconds
+            const additionalDelay = 2000; // Additional delay before redirect
+            
+            // Random chance of showing choice
+            const showChoice = Math.random() < 0.01; // 1 in 100 chance
+
+            // Start typing effect
+            setTimeout(() => {
+                if (showChoice) {
+                    messageElement.style.display = 'none'; // Hide the typing effect
+                    choiceElement.style.display = 'block'; // Show the choice
+                } else {
+                    messageElement.innerHTML = `Launching...`; // Update text to "Launching..."
+                    messageElement.style.borderRight = 'none'; // Hide the caret
+
+                    // Redirect after the additional delay
+                    setTimeout(() => {
+                        window.location.href = 'https://wolfbyte-studios1.github.io/1v1.lol';
+                    }, additionalDelay);
+                }
+            }, typingDuration);
+
+            // Handle Yes button click
+            document.getElementById('yesButton').addEventListener('click', () => {
+                window.location.href = 'https://wolfbyte-studios1.github.io/1v1.lol';
+            });
+
+            // Handle No button click
+            document.getElementById('noButton').addEventListener('click', () => {
+                window.location.href = 'index.html';
+            });
+        }
+
+        // Call the typing simulation function when the page loads
+        window.addEventListener('load', simulateTypingEffect);
+    </script>
+</body>
+</html>
