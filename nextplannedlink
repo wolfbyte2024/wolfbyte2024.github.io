@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.png" type="image/png" id="favicon" />
+    <title>Next planned link</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            background-image: url('https://wallpapers.com/images/high/super-cool-wolf-1vnkzphi9nd86yr7.webp');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            color: white;
+        }
+         nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            height: 70px; /* Set nav bar height to 70px */
+            background-color: rgba(128, 128, 128, 0.5);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .left, .right {
+            display: flex;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+        footer {
+            background-color: rgba(128, 128, 128, 0.5);
+            text-align: center;
+            padding: 20px;
+            margin-top: auto;
+            color: white;
+        }
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            border-radius: 50%;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+        }
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+        .content {
+            text-align: center;
+            margin-bottom: 60px; /* Space for footer */
+        }
+        .neon-link {
+            color: #00FF00; /* Neon green color */
+            text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00; /* Neon effect */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+  <div class="left">
+    <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+    <a href="chat"><i class="fa-solid fa-comments"></i> Chat</a> <!-- Removed .html -->
+  </div>
+  <div class="right">
+    <a href="nextplannedlink"><i class="fa-solid fa-link"></i> Next Planned link</a> <!-- Removed .html -->
+    <a href="aboutus"><i class="fa-solid fa-question-circle"></i> About Us</a> <!-- Removed .html -->
+    <a href="loading1v1lol"><i class="fa-solid fa-person-rifle"></i> 1v1.lol</a> <!-- Removed .html -->
+    <a href="loadingminecraft"><i class="fa-solid fa-cube"></i> Minecraft</a> <!-- Removed .html -->
+    <a href="settings"><i class="fa-solid fa-gear"></i> Settings</a> <!-- Removed .html -->
+  </div>
+</nav>
+
+
+    <div class="content">
+        <h1>Next Planned Link</h1>
+        <div>
+            <p>If this site gets blocked we will have it on another link within around a day or 2.</p>
+        </div>
+        <div>
+            <p>The next link will be:</p>
+            <a href="https://wolfbyte123.playcode.io" class="neon-link">https://wolfbyte123.playcode.io</a>
+            <p>You should bookmark this link, and when it gets blocked, you can just go to the bookmark.</p>
+        </div>
+    </div>
+    
+    <footer>
+        <label for="faviconSwitch">Switch Favicon:</label>
+        <label class="switch">
+            <input type="checkbox" id="faviconSwitch" />
+            <span class="slider"></span>
+        </label>
+    </footer>
+
+    <script>
+        function changeFavicon() {
+            const favicon = document.getElementById('favicon');
+            const isChecked = document.getElementById('faviconSwitch').checked;
+            favicon.href = isChecked ? 'favicon1.png' : 'favicon.png';
+            document.title = isChecked ? 'MYP home' : 'wolfbyte home'; // Change title
+            localStorage.setItem('faviconState', isChecked); // Save state in localStorage
+        }
+
+        // Load favicon state on page load
+        window.addEventListener('load', () => {
+            const favicon = document.getElementById('favicon');
+            const savedState = localStorage.getItem('faviconState');
+            if (savedState === 'true') {
+                favicon.href = 'favicon1.png';
+                document.getElementById('faviconSwitch').checked = true;
+            } else {
+                favicon.href = 'favicon.png';
+                document.getElementById('faviconSwitch').checked = false;
+            }
+        });
+
+        document.getElementById('faviconSwitch').addEventListener('change', changeFavicon);
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === '`') {
+                window.location.href = 'https://web.toddleapp.com/page-not-found';
+            }
+        });
+    </script>
+</body>
+</html>
