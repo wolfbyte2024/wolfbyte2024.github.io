@@ -110,18 +110,19 @@
 </head>
 <body>
     <nav>
-        <div class="left">
-            <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
-            <a href="chat.html"><i class="fa-solid fa-comments"></i> Chat</a>
-        </div>
-        <div class="right">
-            <a href="nextplannedlink.html"><i class="fa-solid fa-link"></i> Next Planned link</a>
-            <a href="aboutus.html"><i class="fa-solid fa-question-circle"></i> About Us</a>
-            <a href="loading1v1lol.html"><i class="fa-solid fa-person-rifle"></i> 1v1.lol</a> <!-- Updated link -->
-            <a href="loadingminecraft.html"><i class="fa-solid fa-cube"></i> Minecraft</a>
-            <a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a> <!-- Added Settings Link -->
-        </div>
-    </nav>
+  <div class="left">
+    <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+    <a href="chat"><i class="fa-solid fa-comments"></i> Chat</a> <!-- Removed .html -->
+  </div>
+  <div class="right">
+    <a href="nextplannedlink"><i class="fa-solid fa-link"></i> Next Planned link</a> <!-- Removed .html -->
+    <a href="aboutus"><i class="fa-solid fa-question-circle"></i> About Us</a> <!-- Removed .html -->
+    <a href="loading1v1lol"><i class="fa-solid fa-person-rifle"></i> 1v1.lol</a> <!-- Removed .html -->
+    <a href="loadingminecraft"><i class="fa-solid fa-cube"></i> Minecraft</a> <!-- Removed .html -->
+    <a href="settings"><i class="fa-solid fa-gear"></i> Settings</a> <!-- Removed .html -->
+  </div>
+</nav>
+
 
     <!-- Typing Effect -->
     <h1 class="typing-effect">
