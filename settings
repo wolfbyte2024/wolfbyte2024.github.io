@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.png" type="image/png" id="favicon" />
+    <title>Settings - Wolfbyte</title>
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-..."
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      /* Navbar, footer, and body style */
+      body {
+          background-image: url('https://wallpapers.com/images/high/super-cool-wolf-1vnkzphi9nd86yr7.webp');
+          background-size: cover;
+          background-position: center;
+          background-attachment: fixed;
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          min-height: 100vh;
+          display: flex;
+          flex-direction: column;
+          color: white;
+      }
+
+      nav {
+          display: flex;
+          justify-content: space-between;
+          padding: 10px;
+          background-color: rgba(128, 128, 128, 0.5);
+          position: sticky;
+          top: 0;
+          z-index: 1000;
+      }
+
+      .left, .right {
+          display: flex;
+      }
+
+      nav a {
+          margin: 0 15px;
+          text-decoration: none;
+          color: white;
+          display: flex;
+          align-items: center;
+      }
+
+      footer {
+          background-color: rgba(128, 128, 128, 0.5);
+          text-align: center;
+          padding: 20px;
+          margin-top: auto;
+          color: white;
+      }
+
+      /* Style for buttons in the settings page */
+      .button-container {
+          text-align: center;
+          margin: auto;
+          margin-top: 100px;
+      }
+
+      .button-container button {
+          background-color: white;
+          color: black;
+          border: none;
+          padding: 15px 30px;
+          margin: 10px;
+          cursor: pointer;
+          font-size: 18px;
+          border-radius: 5px;
+      }
+
+      .button-container button:hover {
+          background-color: #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="left">
+        <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="chat"><i class="fa-solid fa-comments"></i> Chat</a>
+      </div>
+      <div class="right">
+        <a href="nextplannedlink"><i class="fa-solid fa-link"></i> Next Planned link</a>
+        <a href="aboutus"><i class="fa-solid fa-question-circle"></i> About Us</a>
+        <a href="loading1v1lol"><i class="fa-solid fa-person-rifle"></i> 1v1.lol</a>
+        <a href="loadingminecraft"><i class="fa-solid fa-cube"></i> Minecraft</a>
+        <a href="settings"><i class="fa-solid fa-gear"></i> Settings</a>
+      </div>
+    </nav>
+
+    <div class="button-container">
+      <button id="defaultButton">Default</button>
+      <button id="blueButton">Blue</button>
+      <button id="purpleButton">Purple</button>
+      <button id="starryButton">Starry</button>
+    </div>
+
+    <footer>
+      <label for="faviconSwitch">Switch Favicon:</label>
+      <label class="switch">
+        <input type="checkbox" id="faviconSwitch" />
+        <span class="slider"></span>
+      </label>
+    </footer>
+
+    <script>
+      // Set different backgrounds
+      const backgrounds = {
+        "default": "https://wallpapers.com/images/high/super-cool-wolf-1vnkzphi9nd86yr7.webp", // b1
+        "blue": "https://www.example.com/b2.jpg", // replace with b2 link
+        "purple": "https://www.example.com/b3.jpg", // replace with b3 link
+        "starry": "https://www.example.com/b4.jpg" // replace with b4 link
+      };
+
+      // Function to change the background and save the choice in localStorage
+      function changeBackground(theme) {
+        const backgroundUrl = backgrounds[theme];
+        document.body.style.backgroundImage = `url('${backgroundUrl}')`;
+        localStorage.setItem('selectedBackground', theme); // Save the theme choice
+      }
+
+      // Check and load the saved background
+      window.addEventListener('load', () => {
+        const savedBackground = localStorage.getItem('selectedBackground');
+        if (savedBackground && backgrounds[savedBackground]) {
+          changeBackground(savedBackground);
+        }
+      });
+
+      // Event listeners for each button
+      document.getElementById('defaultButton').addEventListener('click', () => changeBackground('default'));
+      document.getElementById('blueButton').addEventListener('click', () => changeBackground('blue'));
+      document.getElementById('purpleButton').addEventListener('click', () => changeBackground('purple'));
+      document.getElementById('starryButton').addEventListener('click', () => changeBackground('starry'));
+
+      // Favicon switch logic (same as in your original code)
+      function changeFavicon() {
+          const favicon = document.getElementById('favicon');
+          const isChecked = document.getElementById('faviconSwitch').checked;
+          favicon.href = isChecked ? 'favicon1.png' : 'favicon.png';
+      }
+
+      document.getElementById('faviconSwitch').addEventListener('change', changeFavicon);
+
+      window.addEventListener('load', () => {
+          const favicon = document.getElementById('favicon');
+          document.getElementById('faviconSwitch').checked = favicon.href.includes('favicon1.png');
+      });
+    </script>
+  </body>
+</html>
