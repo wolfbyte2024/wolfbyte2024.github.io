@@ -116,9 +116,9 @@
       // Set different backgrounds
       const backgrounds = {
         "default": "https://wallpapers.com/images/high/super-cool-wolf-1vnkzphi9nd86yr7.webp", // b1
-        "blue": "https://www.example.com/b2.jpg", // replace with b2 link
-        "purple": "https://www.example.com/b3.jpg", // replace with b3 link
-        "starry": "https://www.example.com/b4.jpg" // replace with b4 link
+        "blue": "b1.jpeg",
+        "purple": "b3.jpeg", // replace with b3 link
+        "starry": "b2.jpeg" // replace with b4 link
       };
 
       // Function to change the background and save the choice in localStorage
