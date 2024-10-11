@@ -88,6 +88,27 @@
         input:checked + .slider:before {
             transform: translateX(26px);
         }
+        .typing-effect {
+            font-size: 2rem;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            white-space: pre-wrap;
+            overflow-wrap: break-word;
+            border-right: 2px solid white;
+            animation: blink-caret 0.75s step-end infinite;
+            display: inline-block;
+            max-width: 80vw;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: white; }
+        }
+        #typingContainer {
+            margin-top: 100px; /* Adjust this value to position lower */
+        }
+    </style>
     </style>
 </head>
 <body>
