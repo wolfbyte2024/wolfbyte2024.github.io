@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="favicon.png" type="image/png" id="favicon" />
-    <title>Next planned link</title>
+    <title>Next Planned Link</title>
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
@@ -28,14 +28,16 @@
             justify-content: space-between;
             padding: 10px;
             height: 70px; /* Set nav bar height to 70px */
-            background-color: rgba(128, 128, 128, 0.5); /* Translucent grey */
+            background-color: rgba(0, 0, 0, 0.85); /* More opaque black */
             position: sticky;
             top: 0;
             z-index: 1000;
         }
+
         .left, .right {
             display: flex;
         }
+
         nav a {
             margin: 0 15px;
             text-decoration: none;
@@ -46,11 +48,30 @@
 
         /* Footer */
         footer {
-            background-color: rgba(128, 128, 128, 0.5); /* Translucent grey */
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.85); /* More opaque black */
             padding: 20px;
-            margin-top: auto;
             color: white; /* White text color for footer */
+            margin-top: auto;
+        }
+
+        .footer-left {
+            display: flex;
+        }
+
+        .footer-left a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: lightblue;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-left a i {
+            margin-right: 5px;
         }
 
         .switch {
@@ -59,11 +80,13 @@
             width: 60px;
             height: 34px;
         }
+
         .switch input {
             opacity: 0;
             width: 0;
             height: 0;
         }
+
         .slider {
             position: absolute;
             cursor: pointer;
@@ -75,6 +98,7 @@
             transition: .4s;
             border-radius: 34px;
         }
+
         .slider:before {
             position: absolute;
             content: "";
@@ -86,9 +110,11 @@
             background-color: white;
             transition: .4s;
         }
+
         input:checked + .slider {
             background-color: #2196F3;
         }
+
         input:checked + .slider:before {
             transform: translateX(26px);
         }
@@ -97,6 +123,7 @@
             text-align: center;
             margin-bottom: 60px; /* Space for footer */
         }
+
         .neon-link {
             color: #00FF00; /* Neon green color */
             text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00; /* Neon effect */
@@ -111,7 +138,7 @@
         <a href="othersites.html"><i class="fa-solid fa-globe"></i> Other Sites</a>
       </div>
       <div class="right">
-        <a href="nextplannedlink.html"><i class="fa-solid fa-link"></i> Next Planned link</a>
+        <a href="nextplannedlink.html"><i class="fa-solid fa-link"></i> Next Planned Link</a>
         <a href="aboutus.html"><i class="fa-solid fa-question-circle"></i> About Us</a>
         <a href="loading1v1lol.html"><i class="fa-solid fa-person-rifle"></i> 1v1.lol</a>
         <a href="loadingminecraft.html"><i class="fa-solid fa-cube"></i> Minecraft</a>
@@ -123,7 +150,7 @@
     <div class="content">
         <h1>Next Planned Link</h1>
         <div>
-            <p>If this site gets blocked we will have it on another link within around a day or 2.</p>
+            <p>If this site gets blocked, we will have it on another link within around a day or two.</p>
         </div>
         <div>
             <p>The next link will be:</p>
@@ -178,25 +205,22 @@
             const savedBackground = localStorage.getItem('background');
             if (savedBackground) {
                 document.body.style.backgroundImage = savedBackground; // Apply the saved background image
-                const currentBackground = savedBackground.match(/'([^']+)'/)[1];
-                document.getElementById('current-background').innerText = currentBackground.split('/').pop().split('.')[0]; // Update displayed background name
             }
         });
 
         document.getElementById('faviconSwitch').addEventListener('change', changeFavicon);
 
         // Background change functions
-        function changeBackground(image, name) {
+        function changeBackground(image) {
             document.body.style.backgroundImage = `url('${image}')`;
             localStorage.setItem('background', `url('${image}')`); // Save the selected background in localStorage
-            document.getElementById('current-background').innerText = name; // Update displayed background name
         }
 
         // Event listeners for background buttons
-        document.getElementById('default-btn').addEventListener('click', () => changeBackground('https://wallpapers.com/images/high/super-cool-wolf-1vnkzphi9nd86yr7.webp', 'Default'));
-        document.getElementById('starry-btn').addEventListener('click', () => changeBackground('b2.jpeg', 'Starry'));
-        document.getElementById('blue-btn').addEventListener('click', () => changeBackground('b1.jpeg', 'Blue'));
-        document.getElementById('purple-btn').addEventListener('click', () => changeBackground('b3.jpeg', 'Purple'));
+        document.getElementById('default-btn').addEventListener('click', () => changeBackground('https://wallpapers.com/images/high/super-cool-wolf-1vnkzphi9nd86yr7.webp'));
+        document.getElementById('starry-btn').addEventListener('click', () => changeBackground('b2.jpeg'));
+        document.getElementById('blue-btn').addEventListener('click', () => changeBackground('b1.jpeg'));
+        document.getElementById('purple-btn').addEventListener('click', () => changeBackground('b3.jpeg'));
 
         document.addEventListener('keydown', (event) => {
             if (event.key === '`') {
