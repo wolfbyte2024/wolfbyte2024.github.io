@@ -26,7 +26,7 @@
             justify-content: space-between;
             padding: 10px;
             height: 70px; /* Set nav bar height to 70px */
-            background-color: rgba(128, 128, 128, 0.5); /* Translucent grey */
+            background-color: rgba(0, 0, 0, 0.85); /* More opaque black */
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -42,11 +42,27 @@
             align-items: center;
         }
         footer {
-            background-color: rgba(128, 128, 128, 0.5); /* Translucent grey */
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.85); /* More opaque black */
             padding: 20px;
-            margin-top: auto;
             color: white; /* White text color for footer */
+            margin-top: auto;
+        }
+        .footer-left {
+            display: flex;
+        }
+        .footer-left a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: lightblue;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+        .footer-left a i {
+            margin-right: 5px;
         }
         .switch {
             position: relative;
@@ -117,11 +133,11 @@
         <a href="othersites.html"><i class="fa-solid fa-globe"></i> Other Sites</a>
       </div>
       <div class="right">
-        <a href="nextplannedlink.html"><i class="fa-solid fa-link"></i> Next Planned link</a>
+        <a href="nextplannedlink.html"><i class="fa-solid fa-link"></i> Next Planned Link</a>
         <a href="aboutus.html"><i class="fa-solid fa-question-circle"></i> About Us</a>
         <a href="loading1v1lol.html"><i class="fa-solid fa-person-rifle"></i> 1v1.lol</a>
         <a href="loadingminecraft.html"><i class="fa-solid fa-cube"></i> Minecraft</a>
-        <a href="games.html"><i class="fa-solid fa-gamepad"></i> Games Launcher</a> <!-- New Games Launcher Link -->
+        <a href="games.html"><i class="fa-solid fa-gamepad"></i> Games Launcher</a>
         <a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a>
       </div>
     </nav>
@@ -131,25 +147,25 @@
     </div>
 
     <footer>
-    <div class="footer-left">
+      <div class="footer-left">
         <a href="https://stackoverflow.com/users/27782380/wolf-byte" target="_blank">
-            <i class="fa-brands fa-stack-overflow"></i> Stack Overflow
+          <i class="fa-brands fa-stack-overflow"></i> Stack Overflow
         </a>
         <a href="https://wolfbyte.straw.page" target="_blank">
-            <i class="fa-solid fa-face-smile"></i> Straw Page
+          <i class="fa-solid fa-face-smile"></i> Straw Page
         </a>
         <a href="https://github.com/wolfbyte-studios1" target="_blank">
-            <i class="fa-brands fa-github"></i> GitHub
+          <i class="fa-brands fa-github"></i> GitHub
         </a>
-    </div>
-    <div class="footer-right">
+      </div>
+      <div class="footer-right">
         <label for="faviconSwitch">Switch Favicon:</label>
         <label class="switch">
-            <input type="checkbox" id="faviconSwitch" />
-            <span class="slider"></span>
+          <input type="checkbox" id="faviconSwitch" />
+          <span class="slider"></span>
         </label>
-    </div>
-</footer>
+      </div>
+    </footer>
 
     <script>
         const textToType = "01100100 01100101 01110110 01100101 01101111 01101100 01110000 01101001 01101110 01100111 00100000 01110100 01101000 01100101 00100000 01110111 01100101 01100010 00100000 00110101 00100000 01110011 01110100 01100101 01110000 01110011 00100000 01100001 01101000 01100101 01100001 01100100";
