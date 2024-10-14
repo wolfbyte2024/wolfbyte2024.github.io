@@ -28,7 +28,7 @@
             justify-content: space-between;
             padding: 10px;
             height: 70px; /* Set nav bar height to 70px */
-            background-color: rgba(0, 0, 0, 0.85); /* More opaque black */
+            background-color: rgba(128, 128, 128, 0.5); /* Translucent grey */
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -39,18 +39,18 @@
         nav a {
             margin: 0 15px;
             text-decoration: none;
-            color: white;
+            color: white; /* White text color for nav links */
             display: flex;
             align-items: center;
         }
 
         /* Footer */
         footer {
-            background-color: rgba(0, 0, 0, 0.85); /* More opaque black */
+            background-color: rgba(128, 128, 128, 0.5); /* Translucent grey */
             text-align: center;
             padding: 20px;
             margin-top: auto;
-            color: white;
+            color: white; /* White text color for footer */
         }
 
         .switch {
@@ -162,7 +162,7 @@
     <div class="game-container">
         <!-- First Rectangle -->
         <div class="game-rectangle">
-            <img class="game-image" src="game1.jpg" alt="opps,     you have bad network">
+            <img class="game-image" src="game1.jpg" alt="opps, you have bad network">
             <div class="game-info">Game 1</div>
             <button class="launch-btn">Launch</button>
         </div>
@@ -197,8 +197,7 @@
     </div>
 </footer>
 
-
-   <script>
+    <script>
         function changeFavicon() {
             const favicon = document.getElementById('favicon');
             const isChecked = document.getElementById('faviconSwitch').checked;
