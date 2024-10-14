@@ -1,147 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="favicon.png" type="image/png" id="favicon" />
-    <title>Game Launcher</title>
+    <title>Other Sites</title>
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-image: url('https://wallpapers.com/images/high/super-cool-wolf-1vnkzphi9nd86yr7.webp');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            min-height: 100vh;
-            color: white;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* Navigation Bar */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            padding: 10px;
-            height: 70px; /* Set nav bar height to 70px */
-            background-color: rgba(0, 0, 0, 0.85); /* More opaque black */
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        .left, .right {
-            display: flex;
-        }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: white; /* White text color for nav links */
-            display: flex;
-            align-items: center;
-        }
-
-        /* Footer */
-        footer {
-            background-color: rgba(0, 0, 0, 0.85); /* More opaque black */
-            text-align: center;
-            padding: 20px;
-            margin-top: auto;
-            color: white; /* White text color for footer */
-        }
-
-        .switch {
-            position: relative;
-            display: inline-block;
-            width: 60px;
-            height: 34px;
-        }
-        .switch input {
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
-        .slider {
-            position: absolute;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #ccc;
-            transition: .4s;
-            border-radius: 34px;
-        }
-        .slider:before {
-            position: absolute;
-            content: "";
-            height: 26px;
-            width: 26px;
-            border-radius: 50%;
-            left: 4px;
-            bottom: 4px;
-            background-color: white;
-            transition: .4s;
-        }
-        input:checked + .slider {
-            background-color: #2196F3;
-        }
-        input:checked + .slider:before {
-            transform: translateX(26px);
-        }
-
-        /* Game Launcher Styles */
-        .game-container {
-            width: 1021px;
-            margin: 50px auto; /* Center the container */
-        }
-
-        .game-rectangle {
-            width: 1021px;
-            height: 97px;
-            border: 2px solid white; /* White outline */
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px; /* Space between rectangles */
-            position: relative;
-        }
-
-        .game-image {
-            height: 97px;
-            width: auto;
-            margin-right: 20px; /* Space between image and text */
-        }
-
-        .game-info {
-            color: white;
-            font-size: 24px;
-            flex: 1; /* Makes the text fill the remaining space */
-            padding-left: 20px; /* Adds space between the image and the text */
-        }
-
-        .launch-btn {
-            position: absolute;
-            right: 20px;
-            background-color: rgba(128, 128, 128, 0.8); /* Opaque grey button */
-            border: none;
-            color: white;
-            padding: 10px 20px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s ease;
-        }
-
-        .launch-btn:hover {
-            background-color: rgba(128, 128, 128, 1); /* Change on hover */
-        }
+      body {
+          background-image: url('https://wallpapers.com/images/high/super-cool-wolf-1vnkzphi9nd86yr7.webp'); 
+          background-size: cover;
+          background-position: center;
+          background-attachment: fixed;
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          min-height: 100vh;
+          display: flex;
+          flex-direction: column;
+          color: white;
+      }
+      nav {
+          display: flex;
+          justify-content: space-between;
+          padding: 10px;
+          height: 70px; /* Set nav bar height to 70px */
+          background-color: rgba(0, 0, 0, 0.85); /* More opaque black */
+          position: sticky;
+          top: 0;
+          z-index: 1000;
+      }
+      .left, .right {
+          display: flex;
+      }
+      nav a {
+          margin: 0 15px;
+          text-decoration: none;
+          color: white;
+          display: flex;
+          align-items: center;
+      }
+      footer {
+          background-color: rgba(0, 0, 0, 0.85); /* More opaque black */
+          padding: 20px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          color: white;
+          margin-top: auto;
+      }
+      .footer-left {
+          display: flex;
+          align-items: center;
+      }
+      .footer-left a {
+          margin-right: 15px;
+          text-decoration: none;
+          color: lightblue;
+          font-weight: bold;
+      }
+      .footer-left a i {
+          margin-right: 5px;
+      }
+      .footer-right {
+          display: flex;
+          align-items: center;
+      }
+      .switch {
+          position: relative;
+          display: inline-block;
+          width: 60px;
+          height: 34px;
+      }
+      .switch input {
+          opacity: 0;
+          width: 0;
+          height: 0;
+      }
+      .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: #ccc;
+          transition: .4s;
+          border-radius: 34px;
+      }
+      .slider:before {
+          position: absolute;
+          content: "";
+          height: 26px;
+          width: 26px;
+          border-radius: 50%;
+          left: 4px;
+          bottom: 4px;
+          background-color: white;
+          transition: .4s;
+      }
+      input:checked + .slider {
+          background-color: #2196F3;
+      }
+      input:checked + .slider:before {
+          transform: translateX(26px);
+      }
+      .content {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          height: 100vh;
+          text-align: center;
+      }
+      a {
+          text-decoration: none;
+          color: lightblue;
+          font-weight: bold;
+      }
+      img {
+          margin-top: 10px;
+          width: 100px;
+          height: auto;
+      }
     </style>
 </head>
 <body>
-
-    <!-- Navigation Bar -->
     <nav>
       <div class="left">
         <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
@@ -149,52 +134,44 @@
         <a href="othersites.html"><i class="fa-solid fa-globe"></i> Other Sites</a>
       </div>
       <div class="right">
-        <a href="nextplannedlink.html"><i class="fa-solid fa-link"></i> Next Planned link</a>
+        <a href="nextplannedlink.html"><i class="fa-solid fa-link"></i> Next Planned Link</a>
         <a href="aboutus.html"><i class="fa-solid fa-question-circle"></i> About Us</a>
         <a href="loading1v1lol.html"><i class="fa-solid fa-person-rifle"></i> 1v1.lol</a>
         <a href="loadingminecraft.html"><i class="fa-solid fa-cube"></i> Minecraft</a>
-        <a href="games.html"><i class="fa-solid fa-gamepad"></i> Games Launcher</a> <!-- New Games Launcher Link -->
+        <a href="games.html"><i class="fa-solid fa-gamepad"></i> Games Launcher</a>
         <a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a>
       </div>
     </nav>
 
-    <!-- Game Launcher Content -->
-    <div class="game-container">
-        <!-- First Rectangle -->
-        <div class="game-rectangle">
-            <img class="game-image" src="game1.jpg" alt="opps, you have bad network">
-            <div class="game-info">Game 1</div>
-            <button class="launch-btn">Launch</button>
-        </div>
-
-        <!-- Second Rectangle -->
-        <div class="game-rectangle">
-            <img class="game-image" src="game2-image.jpg" alt="Game 2 Image">
-            <div class="game-info">Game 2</div>
-            <button class="launch-btn">Launch</button>
-        </div>
+    <div class="content">
+        <h1>Wraithcode</h1>
+        <img src="https://wraithcode2023.github.io/logo_large.png" alt="Wraithcode Logo" />
+        <p>
+            <a href="https://wraithcode2018.github.io" target="_blank">
+                Wraithcode is an awesome site created by Kai Pollak, an 8th grader at DCI who is extremely good at coding and is way better than me. You should go check out his site as he is, in my opinion, one of the best developers at DCI. Go check out his site.
+            </a>
+        </p>
     </div>
 
-    <!-- Footer -->
     <footer>
-        <div class="footer-left">
-            <a href="https://stackoverflow.com/users/27782380/wolf-byte" target="_blank">
-                <i class="fa-brands fa-stack-overflow"></i> Stack Overflow
-            </a>
-            <a href="https://wolfbyte.straw.page" target="_blank">
-                <i class="fa-solid fa-face-smile"></i> Straw Page
-            </a>
-            <a href="https://github.com/wolfbyte-studios1" target="_blank">
-                <i class="fa-brands fa-github"></i> GitHub
-            </a>
-        </div>
-        <div class="footer-right">
-            <label for="faviconSwitch">Switch Favicon:</label>
-            <label class="switch">
-                <input type="checkbox" id="faviconSwitch" />
-                <span class="slider"></span>
-            </label>
-        </div>
+      <div class="footer-left">
+        <a href="https://stackoverflow.com/users/27782380/wolf-byte" target="_blank">
+          <i class="fa-brands fa-stack-overflow"></i> Stack Overflow
+        </a>
+        <a href="https://wolfbyte.straw.page" target="_blank">
+          <i class="fa-solid fa-face-smile"></i> Straw Page
+        </a>
+        <a href="https://github.com/wolfbyte-studios1" target="_blank">
+          <i class="fa-brands fa-github"></i> GitHub
+        </a>
+      </div>
+      <div class="footer-right">
+        <label for="faviconSwitch">Switch Favicon:</label>
+        <label class="switch">
+          <input type="checkbox" id="faviconSwitch" />
+          <span class="slider"></span>
+        </label>
+      </div>
     </footer>
 
     <script>
@@ -217,36 +194,9 @@
                 favicon.href = 'favicon.png';
                 document.getElementById('faviconSwitch').checked = false;
             }
-
-            // Load background image state
-            const savedBackground = localStorage.getItem('background');
-            if (savedBackground) {
-                document.body.style.backgroundImage = savedBackground; // Apply the saved background image
-                const currentBackground = savedBackground.match(/'([^']+)'/)[1];
-                document.getElementById('current-background').innerText = currentBackground.split('/').pop().split('.')[0]; // Update displayed background name
-            }
         });
 
         document.getElementById('faviconSwitch').addEventListener('change', changeFavicon);
-
-        // Background change functions
-        function changeBackground(image, name) {
-            document.body.style.backgroundImage = `url('${image}')`;
-            localStorage.setItem('background', `url('${image}')`); // Save the selected background in localStorage
-            document.getElementById('current-background').innerText = name; // Update displayed background name
-        }
-
-        // Event listeners for background buttons
-        document.getElementById('default-btn').addEventListener('click', () => changeBackground('https://wallpapers.com/images/high/super-cool-wolf-1vnkzphi9nd86yr7.webp', 'Default'));
-        document.getElementById('starry-btn').addEventListener('click', () => changeBackground('b2.jpeg', 'Starry'));
-        document.getElementById('blue-btn').addEventListener('click', () => changeBackground('b1.jpeg', 'Blue'));
-        document.getElementById('purple-btn').addEventListener('click', () => changeBackground('b3.jpeg', 'Purple'));
-
-        document.addEventListener('keydown', (event) => {
-            if (event.key === '`') {
-                window.location.href = 'https://web.toddleapp.com/page-not-found';
-            }
-        });
     </script>
 </body>
 </html>
