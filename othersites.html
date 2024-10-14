@@ -6,36 +6,30 @@
     <link rel="icon" href="favicon.png" type="image/png" id="favicon" />
     <title>Other sites</title>
     <!-- Font Awesome CDN -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-..."
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
       body {
-          background-image: url('https://wallpapers.com/images/high/super-cool-wolf-1vnkzphi9nd86yr7.webp'); /* Background image */
-          background-size: cover; /* Ensure the image covers the entire screen */
-          background-position: center; /* Center the background image */
-          background-attachment: fixed; /* Keep the background fixed when scrolling */
+          background-image: url('https://wallpapers.com/images/high/super-cool-wolf-1vnkzphi9nd86yr7.webp'); 
+          background-size: cover;
+          background-position: center;
+          background-attachment: fixed;
           font-family: Arial, sans-serif;
           margin: 0;
           padding: 0;
           min-height: 100vh;
           display: flex;
           flex-direction: column;
-          color: white; /* Set default text color to white */
+          color: white;
       }
-       nav {
-            display: flex;
-            justify-content: space-between;
-            padding: 10px;
-            height: 70px; /* Set nav bar height to 70px */
-            background-color: rgba(128, 128, 128, 0.5);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+      nav {
+          display: flex;
+          justify-content: space-between;
+          padding: 10px;
+          height: 70px;
+          background-color: rgba(0, 0, 0, 0.85);
+          position: sticky;
+          top: 0;
+          z-index: 1000;
       }
       .left, .right {
           display: flex;
@@ -43,16 +37,31 @@
       nav a {
           margin: 0 15px;
           text-decoration: none;
-          color: white; /* White text color for nav links */
+          color: white;
           display: flex;
           align-items: center;
       }
       footer {
-          background-color: rgba(128, 128, 128, 0.5); /* Translucent grey */
-          text-align: center;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: rgba(0, 0, 0, 0.85);
           padding: 20px;
-          margin-top: auto;
-          color: white; /* White text color for footer */
+          color: white;
+      }
+      .footer-left {
+          display: flex;
+      }
+      .footer-left a {
+          margin: 0 15px; /* Adds spacing between the links */
+          text-decoration: none;
+          color: lightblue;
+          font-weight: bold;
+          display: flex;
+          align-items: center;
+      }
+      .footer-left a i {
+          margin-right: 5px;
       }
       .switch {
           position: relative;
@@ -98,18 +107,18 @@
           justify-content: center;
           align-items: center;
           flex-direction: column;
-          height: 100vh; /* Make sure it takes the full height */
+          height: 100vh;
           text-align: center;
       }
       a {
           text-decoration: none;
-          color: lightblue; /* Change link color for visibility */
+          color: lightblue;
           font-weight: bold;
       }
       img {
-          margin-top: 10px; /* Add some space above the image */
-          width: 100px; /* Set a width for the image */
-          height: auto; /* Maintain aspect ratio */
+          margin-top: 10px;
+          width: 100px;
+          height: auto;
       }
     </style>
 </head>
@@ -117,15 +126,15 @@
     <nav>
       <div class="left">
         <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
-        <a href="chat.htmk"><i class="fa-solid fa-comments"></i> Chat</a>
+        <a href="chat.html"><i class="fa-solid fa-comments"></i> Chat</a>
         <a href="othersites.html"><i class="fa-solid fa-globe"></i> Other Sites</a>
       </div>
       <div class="right">
-        <a href="nextplannedlink.html"><i class="fa-solid fa-link"></i> Next Planned link</a>
+        <a href="nextplannedlink.html"><i class="fa-solid fa-link"></i> Next Planned Link</a>
         <a href="aboutus.html"><i class="fa-solid fa-question-circle"></i> About Us</a>
         <a href="loading1v1lol.html"><i class="fa-solid fa-person-rifle"></i> 1v1.lol</a>
         <a href="loadingminecraft.html"><i class="fa-solid fa-cube"></i> Minecraft</a>
-        <a href="games.html"><i class="fa-solid fa-gamepad"></i> Games Launcher</a> <!-- New Games Launcher Link -->
+        <a href="games.html"><i class="fa-solid fa-gamepad"></i> Games Launcher</a>
         <a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a>
       </div>
     </nav>
@@ -140,23 +149,35 @@
     </div>
 
     <footer>
-      <label for="faviconSwitch">Switch Favicon:</label>
-      <label class="switch">
-        <input type="checkbox" id="faviconSwitch" />
-        <span class="slider"></span>
-      </label>
+      <div class="footer-left">
+        <a href="https://stackoverflow.com/users/27782380/wolf-byte" target="_blank">
+          <i class="fa-brands fa-stack-overflow"></i> Stack Overflow
+        </a>
+        <a href="https://wolfbyte.straw.page" target="_blank">
+          <i class="fa-solid fa-face-smile"></i> Straw Page
+        </a>
+        <a href="https://github.com/wolfbyte-studios1" target="_blank">
+          <i class="fa-brands fa-github"></i> GitHub
+        </a>
+      </div>
+      <div class="footer-right">
+        <label for="faviconSwitch">Switch Favicon:</label>
+        <label class="switch">
+          <input type="checkbox" id="faviconSwitch" />
+          <span class="slider"></span>
+        </label>
+      </div>
     </footer>
 
-     <script>
+    <script>
         function changeFavicon() {
             const favicon = document.getElementById('favicon');
             const isChecked = document.getElementById('faviconSwitch').checked;
             favicon.href = isChecked ? 'favicon1.png' : 'favicon.png';
-            document.title = isChecked ? 'MYP home' : 'wolfbyte home'; // Change title
-            localStorage.setItem('faviconState', isChecked); // Save state in localStorage
+            document.title = isChecked ? 'MYP home' : 'wolfbyte home';
+            localStorage.setItem('faviconState', isChecked);
         }
 
-        // Load favicon state on page load
         window.addEventListener('load', () => {
             const favicon = document.getElementById('favicon');
             const savedState = localStorage.getItem('faviconState');
