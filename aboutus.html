@@ -177,9 +177,30 @@
                 favicon.href = 'favicon.png';
                 document.getElementById('faviconSwitch').checked = false;
             }
+
+            // Load background image state
+            const savedBackground = localStorage.getItem('background');
+            if (savedBackground) {
+                document.body.style.backgroundImage = savedBackground; // Apply the saved background image
+                const currentBackground = savedBackground.match(/'([^']+)'/)[1];
+                document.getElementById('current-background').innerText = currentBackground.split('/').pop().split('.')[0]; // Update displayed background name
+            }
         });
 
         document.getElementById('faviconSwitch').addEventListener('change', changeFavicon);
+
+        // Background change functions
+        function changeBackground(image, name) {
+            document.body.style.backgroundImage = `url('${image}')`;
+            localStorage.setItem('background', `url('${image}')`); // Save the selected background in localStorage
+            document.getElementById('current-background').innerText = name; // Update displayed background name
+        }
+
+        // Event listeners for background buttons
+        document.getElementById('default-btn').addEventListener('click', () => changeBackground('https://wallpapers.com/images/high/super-cool-wolf-1vnkzphi9nd86yr7.webp', 'Default'));
+        document.getElementById('starry-btn').addEventListener('click', () => changeBackground('b2.jpeg', 'Starry'));
+        document.getElementById('blue-btn').addEventListener('click', () => changeBackground('b1.jpeg', 'Blue'));
+        document.getElementById('purple-btn').addEventListener('click', () => changeBackground('b3.jpeg', 'Purple'));
 
         document.addEventListener('keydown', (event) => {
             if (event.key === '`') {
