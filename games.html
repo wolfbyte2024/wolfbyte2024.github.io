@@ -28,7 +28,7 @@
             justify-content: space-between;
             padding: 10px;
             height: 70px; /* Set nav bar height to 70px */
-            background-color: rgba(128, 128, 128, 0.5); /* Translucent grey */
+            background-color: rgba(0, 0, 0, 0.85); /* More opaque black */
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -46,7 +46,7 @@
 
         /* Footer */
         footer {
-            background-color: rgba(128, 128, 128, 0.5); /* Translucent grey */
+            background-color: rgba(0, 0, 0, 0.85); /* More opaque black */
             text-align: center;
             padding: 20px;
             margin-top: auto;
@@ -177,25 +177,25 @@
 
     <!-- Footer -->
     <footer>
-    <div class="footer-left">
-        <a href="https://stackoverflow.com/users/27782380/wolf-byte" target="_blank">
-            <i class="fa-brands fa-stack-overflow"></i> Stack Overflow
-        </a>
-        <a href="https://wolfbyte.straw.page" target="_blank">
-            <i class="fa-solid fa-face-smile"></i> Straw Page
-        </a>
-        <a href="https://github.com/wolfbyte-studios1" target="_blank">
-            <i class="fa-brands fa-github"></i> GitHub
-        </a>
-    </div>
-    <div class="footer-right">
-        <label for="faviconSwitch">Switch Favicon:</label>
-        <label class="switch">
-            <input type="checkbox" id="faviconSwitch" />
-            <span class="slider"></span>
-        </label>
-    </div>
-</footer>
+        <div class="footer-left">
+            <a href="https://stackoverflow.com/users/27782380/wolf-byte" target="_blank">
+                <i class="fa-brands fa-stack-overflow"></i> Stack Overflow
+            </a>
+            <a href="https://wolfbyte.straw.page" target="_blank">
+                <i class="fa-solid fa-face-smile"></i> Straw Page
+            </a>
+            <a href="https://github.com/wolfbyte-studios1" target="_blank">
+                <i class="fa-brands fa-github"></i> GitHub
+            </a>
+        </div>
+        <div class="footer-right">
+            <label for="faviconSwitch">Switch Favicon:</label>
+            <label class="switch">
+                <input type="checkbox" id="faviconSwitch" />
+                <span class="slider"></span>
+            </label>
+        </div>
+    </footer>
 
     <script>
         function changeFavicon() {
